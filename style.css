@@ -96,7 +96,7 @@ textarea {
 }
 
 a {
-    color: #000;
+    color: #000 !important;
     text-decoration: none;
 }
 
@@ -122,6 +122,7 @@ a:active {
 
 .site-branding {
     background: rgba(0, 0, 0, 0) url("img/logoLGM.png") no-repeat left top;
+    width: 100%;
 }
 
 .site-title {
@@ -130,7 +131,7 @@ a:active {
     font-weight: normal;
     height: 272px !important;
     line-height: 1;
-    margin: 2% 0 0 54%;
+    margin: 2% 0 0 38.5%;
     width: 1%;
 }
 
@@ -147,4 +148,49 @@ a:active {
 
 .site-info {
     display:none;
+}
+
+.site-header-menu {
+    width: 100%;
+}
+
+.main-navigation .menu-item-has-children > a::after {
+    content: "";
+    position: absolute;
+    right: 16%;
+    top: 35%;
+}
+
+.main-navigation ul ul .menu-item-has-children > a::after {
+    right: 10%;
+    top: 25%;
+    transform: rotate(90deg);
+}
+
+.main-navigation ul ul li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #e6cd0a;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0;
+}
+
+.main-navigation ul ul::before {
+    border-color: #e6cd0a transparent;
+    border-width: 0 10px 10px;
+    right: 9px;
+    top: -9px;
+}
+
+.main-navigation ul ul {
+    border-bottom: 1px solid #e6cd0a;
+    display: block;
+    left: -999em;
+    margin: 0;
+    position: absolute;
+    z-index: 99999;
 }
